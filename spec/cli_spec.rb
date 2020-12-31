@@ -4,7 +4,7 @@ require "rspec-parameterized"
 describe "CLI" do
   subject do
     # Expected error, but actual hunged here
-    cli.foo
+    cli.foo # <- hunged here
   end
 
   it { expect { subject }.to raise_error }
