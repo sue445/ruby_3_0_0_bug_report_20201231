@@ -1,5 +1,5 @@
 class Calc
-  def self.sum(a, b)
+  def sum(a, b)
     a + b
   end
 end

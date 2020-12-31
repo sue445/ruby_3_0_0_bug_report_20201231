@@ -1,6 +1,6 @@
 RSpec.describe Calc do
-  describe ".sum" do
-    subject { Calc.sum(a, b) }
+  describe "#sum" do
+    subject { Calc.new.sum(a, b) }
 
     using RSpec::Parameterized::TableSyntax
 
