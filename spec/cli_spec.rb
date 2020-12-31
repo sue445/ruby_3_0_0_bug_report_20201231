@@ -1,3 +1,6 @@
+require "active_support/all"
+require "rspec-parameterized"
+
 describe "CLI" do
   subject do
     # Expected error, but actual hunged here
