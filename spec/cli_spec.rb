@@ -1,3 +1,12 @@
+describe "CLI" do
+  subject do
+    # Expected error, but actual hunged here
+    cli.foo
+  end
+
+  it { expect { subject }.to raise_error }
+end
+
 xdescribe "GitlabMrRelease::Project" do
   describe "#api_version" do
     using RSpec::Parameterized::TableSyntax
@@ -10,13 +19,4 @@ xdescribe "GitlabMrRelease::Project" do
       # it { should eq expected }
     end
   end
-end
-
-describe "CLI" do
-  subject do
-    # Expected NoMethodError, but actual hunged here
-    cli.foo
-  end
-
-  it { expect { subject }.to raise_error }
 end
