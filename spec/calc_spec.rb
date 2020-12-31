@@ -2,15 +2,23 @@ RSpec.describe Calc do
   describe "#sum" do
     subject { Calc.new.sum(a, b) }
 
-    using RSpec::Parameterized::TableSyntax
+    describe "plain spec" do
+      let(:a) { 1 }
+      let(:b) { 2 }
+      let(:answer) { 3 }
 
-    where(:a, :b, :answer) do
-      1 | 2 | 3
+      it { should eq answer }
     end
 
-    with_them do
-      it "should do additions" do
-        expect(a + b).to eq answer
+    describe "with TableSyntax" do
+      using RSpec::Parameterized::TableSyntax
+
+      where(:a, :b, :answer) do
+        1 | 2 | 3
+      end
+
+      with_them do
+        it { should eq answer }
       end
     end
   end
